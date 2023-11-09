@@ -1,5 +1,5 @@
 const fila = document.querySelector('.contenedor-carousel');
-const peliculas = document.querySelectorAll('.pelicula');
+const manga = document.querySelectorAll('.manga');
 
 const flechaIzquierda = document.getElementById('flecha-izquierda');
 const flechaDerecha = document.getElementById('flecha-derecha');
@@ -27,7 +27,7 @@ flechaIzquierda.addEventListener('click', () => {
 });
 
 // ? ----- ----- Paginacion ----- -----
-const numeroPaginas = Math.ceil(peliculas.length / 5);
+const numeroPaginas = Math.ceil(manga.length / 5);
 for(let i = 0; i < numeroPaginas; i++){
 	const indicador = document.createElement('button');
 
@@ -45,16 +45,16 @@ for(let i = 0; i < numeroPaginas; i++){
 }
 
 // ? ----- ----- Hover ----- -----
-peliculas.forEach((pelicula) => {
+peliculas.forEach((manga) => {
 	pelicula.addEventListener('mouseenter', (e) => {
 		const elemento = e.currentTarget;
 		setTimeout(() => {
-			peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
+			manga.forEach(manga => manga.classList.remove('hover'));
 			elemento.classList.add('hover');
 		}, 300);
 	});
 });
 
 fila.addEventListener('mouseleave', () => {
-	peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
+	manga.forEach(manga => manga.classList.remove('hover'));
 });

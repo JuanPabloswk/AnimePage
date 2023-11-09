@@ -14,6 +14,10 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+a {
+	text-decoration: none;
+}
+
 .contenedor {
 	width: 90%;
 	margin: auto;
@@ -91,7 +95,7 @@ header nav a.activo {
 	margin-right: 1.25em;
 	cursor: pointer;
 	transition: .3s ease all;
-	font-size: 1em;
+	font-size: 0.7em;
 }
 
 .pelicula-principal .boton:hover {
@@ -117,8 +121,8 @@ header nav a.activo {
 
 .contenedor-titulo-controles .indicadores button {
 	background: #fff;
-	height: 20px;
-	width: 20px;
+	height: 15px;
+	width: 15px;
 	cursor: pointer;
 	border: none;
 	margin-right: 2px;
@@ -185,22 +189,75 @@ header nav a.activo {
 	gap: 20px;
 }
 
-.peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
+.peliculas-recomendadas .contenedor-carousel .carousel .manga {
 	min-width: 20%;
 	transition: 0.3s ease all;
 	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
 }
 
-.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover {
+.peliculas-recomendadas .contenedor-carousel .carousel .manga:hover {
 	transform: scale(1.1);
 	transform-origin: center;
 }
 
-.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
+.peliculas-recomendadas .contenedor-carousel .carousel .manga img {
 	width: 100%;
 	height: 100%;
 	vertical-align: top;
 }
+
+/* ---- ----- ----- Iframe ----- ----- ----- */
+
+.iframe {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5% 0;
+
+}
+
+/* ---- ----- ----- Footer ----- ----- ----- */
+
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: transparent;
+}
+
+.info {
+	width: 30%;
+	color: white;
+}
+
+.social-networks {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 30%;
+	padding: 3%;
+
+}
+
+.social-networks a {
+	width: 100%;
+	height: 100%;
+}
+
+.social-networks img {
+	border-radius: 25%;
+	width: 40%;
+	height: 40%;
+}
+
+
+
+
+
+
+
+
+
 
 /* ---- ----- ----- Media Queries ----- ----- ----- */
 @media screen and (max-width: 800px) {
